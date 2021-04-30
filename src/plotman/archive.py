@@ -66,8 +66,10 @@ def rsync_dest(arch_cfg, arch_dir):
     rsync_path = arch_dir.replace(arch_cfg.rsyncd_path, arch_cfg.rsyncd_module)
     if rsync_path.startswith('/'):
         rsync_path = rsync_path[1:]  # Avoid dup slashes.  TODO use path join?
-    rsync_url = 'rsync://%s@%s:12000/%s' % (
-            arch_cfg.rsyncd_user, arch_cfg.rsyncd_host, rsync_path)
+    #rsync_url = 'rsync://%s@%s:12000/%s' % (
+    #        arch_cfg.rsyncd_user, arch_cfg.rsyncd_host, rsync_path)
+    rsync_url = '%s@%s:%s' % (
+            arch_cfg.rsyncd_user, arch_cfg.rsyncd_host, arch_cfg.rsyncd_path)
     return rsync_url
 
 # TODO: maybe consolidate with similar code in job.py?
