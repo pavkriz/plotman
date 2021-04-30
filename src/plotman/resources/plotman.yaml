@@ -64,6 +64,7 @@ directories:
         archive:
                 rsyncd_module: plots
                 rsyncd_path: /plots
+                rsyncd_mountpoint: /plots
                 rsyncd_bwlimit: 80000  # Bandwidth limit in KB/s
                 rsyncd_host: myfarmer
                 rsyncd_user: chia

@@ -42,6 +42,7 @@ def get_validated_configs():
 class Archive:
     rsyncd_module: str
     rsyncd_path: str
+    rsyncd_mountpoint: str
     rsyncd_bwlimit: int
     rsyncd_host: str
     rsyncd_user: str
